@@ -1,6 +1,6 @@
 # Shifting Bottleneck – Streamlit-Demo
 
-**[→ Demo live ausprobieren](#) (Deploy offen)**
+**[→ Demo live ausprobieren](https://sebastianhanisch-shifting-bottleneck-demo.streamlit.app/)**
 
 Neuntes Stück der **Klassische-Scheduling-Theorie-Linie** der "Konzepte"-Reihe für die Website "Sebastian Hanisch
 – Operations Research und Machine Learning", das erste SOTA-Stück: dasselbe Job-Shop-Modell wie Stück 8
