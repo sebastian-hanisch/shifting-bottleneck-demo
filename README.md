@@ -20,9 +20,9 @@ Heads, Fälligkeiten = Horizont − Tails), die Maschine mit dem GRÖSSTEN gelö
 fest sequenziert - danach werden alle bereits sequenzierten Maschinen mit den aktualisierten Heads/Tails erneut
 gelöst ("Reoptimierung").
 
-Ergebnis in Kürze: bei 10 Aufträgen auf 4 Maschinen (Standard-Seed) liegt **Shifting Bottleneck** **18,9 %**
-unter der Fassung ohne Reoptimierung und **16,1 %** unter MWKR (Stück 8). Über die feste Messreihe (5 Instanzen)
-hilft die Reoptimierung im Mittel **11,1 %**, Shifting Bottleneck schlägt MWKR im Mittel um **1,7 %**. **Der
+Ergebnis in Kürze: bei 10 Aufträgen auf 4 Maschinen (Standard-Seed) liegt Cmax bei der Fassung ohne Reoptimierung **18,9 %**
+und bei MWKR (Stück 8) **16,1 %** über dem von **Shifting Bottleneck**. Über die feste Messreihe (5 Instanzen)
+liegt Cmax ohne Reoptimierung im Mittel **11,1 %** und bei MWKR im Mittel **1,7 %** über dem von Shifting Bottleneck. **Der
 ehrliche Befund dieses Stücks**: WEDER die Reoptimierung NOCH das Verfahren insgesamt sind bewiesen monoton
 besser - bei n=3 (Seed 100000) schneidet die Reoptimierung minimal schlechter ab als ganz ohne, bei n=10 (Seed
 100000) verliert Shifting Bottleneck sogar gegen MWKR. Ein zweiter, tieferer Fund beim Bau: das
@@ -33,9 +33,9 @@ erkennt das und weicht beweisbar zyklenfrei aus (aufsteigender Head) - siehe Ver
 
 | Frage | Ergebnis (Mittel über 5 feste Instanzen, Seeds 100000–100004) |
 |---|---|
-| Standardfall (10 Aufträge, 4 Maschinen, Seed 60) | ✅ Shifting Bottleneck **18,9 %** unter ohne Reoptimierung, **16,1 %** unter MWKR |
-| **Reoptimierung im Mittel** | ✅ **+11,1 %** gegenüber ganz ohne Reoptimierung |
-| **Shifting Bottleneck gegen MWKR (Stück 8) im Mittel** | ✅ **+1,7 %** besser |
+| Standardfall (10 Aufträge, 4 Maschinen, Seed 60) | ✅ Cmax liegt ohne Reoptimierung **18,9 %**, bei MWKR **16,1 %** über dem von Shifting Bottleneck |
+| **Reoptimierung im Mittel** | ✅ Cmax ohne Reoptimierung liegt im Mittel **11,1 %** über dem mit Reoptimierung |
+| **Shifting Bottleneck gegen MWKR (Stück 8) im Mittel** | ✅ Cmax von MWKR liegt im Mittel **1,7 %** über dem von Shifting Bottleneck |
 | **Reoptimierung auf JEDER Instanz besser?** | ❌ Nein - n=3, Seed 100000: minimal schlechter als ohne |
 | **Shifting Bottleneck auf JEDER Instanz besser als MWKR?** | ❌ Nein - n=10, Seed 100000: schlechter als MWKR |
 | **Zyklen-Risiko der Teilproblem-Relaxation** | ⚠️ Real (n=20, Seed 100003 ohne Reoptimierung) - erkannt und behoben |

@@ -194,10 +194,10 @@ if a.gap_no_reopt < 0 or a.gap_mwkr < 0:
     candidates = [("die Fassung ohne Reoptimierung", a.gap_no_reopt), ("MWKR", a.gap_mwkr)]
     worse_than, worst_gap = min(candidates, key=lambda c: c[1])
     vehicle_hint = " (auch mit Rüstzeiten möglich, die Teilprobleme kennen sie zwar, das Verfahren bleibt aber eine Heuristik)" if vehicle == "logistik" else ""
-    st.warning(f"⚠️ Shifting Bottleneck (mit Reoptimierung) schneidet hier sogar schlechter ab als {worse_than}: {abs(worst_gap):.1f} % mehr{vehicle_hint}. Kein Fehler - die Reoptimierung verändert die Teilprobleme ALLER noch offenen Maschinen und ist deshalb kein rein lokaler, monoton verbessernder Schritt (siehe 🔬 unten). Das kann auch OHNE Rüstzeiten vorkommen.")
+    st.warning(f"⚠️ Shifting Bottleneck (mit Reoptimierung) schneidet hier sogar schlechter ab als {worse_than}: Cmax von {worse_than} liegt {abs(worst_gap):.1f} % unter dem von Shifting Bottleneck{vehicle_hint}. Kein Fehler - die Reoptimierung verändert die Teilprobleme ALLER noch offenen Maschinen und ist deshalb kein rein lokaler, monoton verbessernder Schritt (siehe 🔬 unten). Das kann auch OHNE Rüstzeiten vorkommen.")
 else:
     tail = " (auch mit Rüstzeiten - bei dieser Instanz schlägt Shifting Bottleneck MWKR trotzdem deutlich)" if vehicle == "logistik" else ""
-    st.success(f"✅ Shifting Bottleneck ist {a.gap_no_reopt:.1f} % besser als ohne Reoptimierung und {a.gap_mwkr:.1f} % besser als MWKR{tail}.")
+    st.success(f"✅ Cmax liegt ohne Reoptimierung {a.gap_no_reopt:.1f} % und bei MWKR {a.gap_mwkr:.1f} % über dem von Shifting Bottleneck{tail}.")
 
 st.markdown("---")
 

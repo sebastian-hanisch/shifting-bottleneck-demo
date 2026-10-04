@@ -74,7 +74,7 @@ def _gap(value, baseline):
 def analyse(settings):
     """Wertet Shifting Bottleneck auf dem gewählten Vehikel aus. MWKR (Stück 8) bleibt vehikel-bewusst als
     Vergleichsbasis - genau wie bei jedem Vorgängerstück ist auch hier kein negativer Abstand ausgeschlossen (das
-    Verfahren ist bewiesen NIE schlechter als ohne Reoptimierung, aber NICHT bewiesen optimal)."""
+    Verfahren ist weder bewiesen nie schlechter als ohne Reoptimierung noch bewiesen optimal)."""
     if settings.vehicle == "logistik":
         inst = logistik_instance(settings.n, settings.m, settings.seed, settings.n_families, settings.setup_time)
         routing, proc, family, setup = inst.routing, inst.proc, inst.family, inst.setup

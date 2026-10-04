@@ -35,7 +35,7 @@ def test_default_run_has_no_exception_and_shows_the_measured_default():
     assert _metric(at, "Shifting Bottleneck (Cmax)") == "608"
     assert _metric(at, "Ohne Reoptimierung") == "+18.9 %"
     assert _metric(at, "MWKR (Stück 8)") == "+16.1 %"
-    assert any("Shifting Bottleneck ist" in s.value for s in at.success)
+    assert any("über dem von Shifting Bottleneck" in s.value for s in at.success)
 
 
 def test_switching_to_the_logistik_vehicle_actually_changes_the_main_metric():
