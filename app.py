@@ -116,7 +116,7 @@ with st.sidebar:
         st.session_state[KEPT["setup_time_slider"]] = setup_time
         seed_widget("n_families_slider")
         n_families = st.slider("Auftragsfamilien", *bounds("n_families_slider"), key="n_families_slider",
-                                help="Weniger Familien bei gleicher Auftragszahl bedeutet mehr Wechsel und damit mehr Rüstzeit insgesamt.")
+                                help="Mehr Familien bei gleicher Auftragszahl bedeuten mehr Wechsel und damit mehr Rüstzeit insgesamt.")
         st.session_state[KEPT["n_families_slider"]] = n_families
     else:
         setup_time = int(st.session_state.get(KEPT["setup_time_slider"], C.DEFAULT_SETUP_TIME))
@@ -298,6 +298,6 @@ Vehikel), `sb_evaluation.py` (Kennzahlen, Sweep, Reoptimierungs-Check, Timing-Me
 st.markdown("---")
 st.caption(
     "Diese Demo ist Teil des Portfolios von [Sebastian Hanisch](https://sebastianhanisch.net) – "
-    "Operations Research und Machine Learning. Interesse an einer maßgeschneiderten Lösung für "
-    "Ihr Unternehmen? [Kontakt aufnehmen](https://sebastianhanisch.net/kontakt.html)"
+    "Operations Research und Machine Learning ([Über mich](https://sebastianhanisch.net/ueber-mich.html)). "
+    "Mehr zur Reihe: [Scheduling-Theorie: SPT bis RCPSP](https://sebastianhanisch.net/konzepte-klassische-scheduling-theorie.html)."
 )
